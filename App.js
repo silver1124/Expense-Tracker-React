@@ -1,4 +1,7 @@
-import ExpenseItem from './components/ExpenseItem';
+import React from 'react';
+
+import NewExpense from './components/Expenses/Form/NewExpense'
+import Expenses from './components/Expenses/Expenses';
 
 function App() {
   const expense = [{
@@ -31,25 +34,14 @@ function App() {
     },
   ];
 
-  const expenses = []
-  for (let i=0; i < expense.length; i++){
-    expenses.push(
-      <ExpenseItem 
-      title = {expense[i].title}
-      amount  = {expense[i].amount}
-      date = {expense[i].date}
-      location = {expense[i].location}
-      />
-    );
-  }
-
-
    return (
     <div>
       <h2>Let's get started!</h2>
-      {expenses}
+      <NewExpense />
+      <Expenses expense={expense} />
     </div>
   );
 }
 
 export default App;
+
