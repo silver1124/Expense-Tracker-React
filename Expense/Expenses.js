@@ -15,6 +15,7 @@ const Expenses = (props) => {
     for (let i=0; i < props.expense.length; i++){
         expenses.push(
         <ExpenseItem 
+        key = {props.expense[i].id}
         title = {props.expense[i].title}
         amount  = {props.expense[i].amount}
         date = {props.expense[i].date}
