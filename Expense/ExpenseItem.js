@@ -13,13 +13,15 @@ const ExpenseItem = (props) => {
         setAmount('100')
     }
     return (
-        <Card className = "expense-item">
-            <div className='temp'>
-            <ExpenseDate date= {props.date}/>
-            <ExpenseDetails amount={amount}  location={props.location}   title={props.title} />
-            <button onClick = {clickhandler} >Update Expense</button>
-            </div>            
-        </Card>
+        <li>
+            <Card className = "expense-item">
+                <div className='temp'>
+                <ExpenseDate date= {props.date}/>
+                <ExpenseDetails amount={amount}  location={props.location}   title={props.title} />
+                <button onClick = {clickhandler} >Update Expense</button>
+                </div>            
+            </Card>
+        </li>
     ) 
 }
 
